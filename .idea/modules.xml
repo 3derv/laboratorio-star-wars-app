@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/laboratorio-star-wars-app.iml" filepath="$PROJECT_DIR$/.idea/laboratorio-star-wars-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/scr/scr.iml" filepath="$PROJECT_DIR$/scr/scr.iml" />
     </modules>
   </component>
 </project>
