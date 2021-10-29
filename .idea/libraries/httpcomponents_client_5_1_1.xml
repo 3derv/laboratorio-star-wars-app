@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="httpcomponents-client-5.1.1">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-cache/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-cache/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-fluent/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-fluent/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-testing/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-testing/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-win/src/examples" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5-win/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../OpenJDK/httpcomponents-client-5.1.1-src/httpclient5/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
