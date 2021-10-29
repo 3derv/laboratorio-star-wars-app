@@ -1,6 +1,10 @@
-package Tabla;
+package com.maintabla;
+
+import JSONManager.Character;
+import JSONManager.DatosPersonajes;
 
 import java.awt.BorderLayout;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFrame;
@@ -15,7 +19,7 @@ public class Tabla extends JFrame {
     JScrollPane desplazamiento = null;
 
 
-    public Tabla() {
+    public Tabla() throws IOException {
         String[] columnas = {"Nombre", "Altura", "Año de nacimiento"};
         tabla = new JTable();
         modelo = new DefaultTableModel();
@@ -48,42 +52,33 @@ public class Tabla extends JFrame {
         this.pack();
     }
 
-    private void agregarDatos(DefaultTableModel modelo) {
+    private void agregarDatos(DefaultTableModel modelo) throws IOException {
         // Borramos todas las filas en la tabla
         modelo.setRowCount(0);
+        //Se obtienen los datos del JSON
+        DatosPersonajes datospersonajes = new DatosPersonajes();
 
+        List<Character> datos = datospersonajes.obtenerDatos();
+        System.out.println("El tamaño de la lista de datos es: "+datos.size());
         // Creamos los datos de una fila de la tabla
-        Object[] datosFila = {"carlos", "1.66", "1946"};
+        Object[] datosFila = {datos.get(0).getName(),datos.get(0).getHeight(),datos.get(0).getBirth_year()};
 
         // agregamos esos datos
         modelo.addRow(datosFila);
 
-        // Creamos las lista
-        List list = new ArrayList();
-        list.add("Andrea");
-        list.add("1.94 m");
-        list.add("1875");
-        list.add("pedro");
-        list.add("1.75 m");
-        list.add("1923");
-        list.add("albertp");
-        list.add("1.85 m");
-        list.add("1845");
 
         // Agregamos MUCHOS mas datos
-        int cont = 0;
-        for(int x=0; x < 2; x++) {
-            datosFila[0] = list.get(cont);
-            datosFila[1] =  list.get(cont + 1);
-            datosFila[2] = list.get(cont + 2);
-            cont += 3;
+        for(int cont=1; cont < datos.size()-1; cont++) {
+            datosFila[0] = datos.get(cont).getName();
+            datosFila[1] = datos.get(cont).getHeight();
+            datosFila[2] = datos.get(cont).getBirth_year();
 
 
             modelo.addRow(datosFila);
         }
     }
 
-    static public void main(String[] args) {
+    static public void main(String[] args) throws IOException {
         Tabla tabla = new Tabla();
 
         tabla.setLocationRelativeTo(null);
