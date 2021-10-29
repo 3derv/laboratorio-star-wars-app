@@ -24,3 +24,11 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+mainClassName = 'Main'
+
+jar{
+    manifest{
+        attributes("Main-Class": "$mainClassName")
+    }
+}
