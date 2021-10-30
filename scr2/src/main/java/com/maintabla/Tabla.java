@@ -20,7 +20,7 @@ public class Tabla extends JFrame {
 
 
     public Tabla() throws IOException {
-        String[] columnas = {"Nombre", "Altura", "Año de nacimiento"};
+        String[] columnas = {"Nombre", "Altura", "Fecha de nacimiento"};
         tabla = new JTable();
         modelo = new DefaultTableModel();
         desplazamiento = new JScrollPane(tabla);
